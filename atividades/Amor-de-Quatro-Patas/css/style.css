@@ -147,6 +147,7 @@ nav a.ativo {
 }
 
 
+
 /* ACESSIBILIDADE */
 
 nav a:focus-visible {
@@ -690,4 +691,71 @@ footer li {
     margin-bottom: 10px;
     color: #c62828;
     font-size: 0.9rem;
+}
+
+
+/* =========================================
+   MODO DE ALTO CONTRASTE
+   ========================================= */
+
+body.alto-contraste {
+    --cor-primaria: #FFFF00;
+    --cor-primaria-escura: #FFFF00;
+    --cor-secundaria: #00FFFF;
+
+    --cor-fundo: #000000;
+    --cor-superficie: #000000;
+    --cor-texto: #FFFFFF;
+    --cor-texto-secundario: #FFFFFF;
+    --cor-borda: #FFFFFF;
+    --cor-destaque: #000000;
+}
+
+body.alto-contraste header {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFF00;
+}
+
+body.alto-contraste nav ul {
+    background-color: #000000;
+    border: 2px solid #FFFFFF;
+}
+
+body.alto-contraste nav a {
+    color: #FFFF00;
+}
+
+body.alto-contraste nav a:hover,
+body.alto-contraste nav a.ativo {
+    background-color: #FFFF00;
+    color: #000000;
+}
+
+body.alto-contraste article,
+body.alto-contraste form,
+body.alto-contraste fieldset,
+body.alto-contraste .modal-conteudo {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+body.alto-contraste section h2,
+body.alto-contraste section h3,
+body.alto-contraste legend {
+    color: #FFFF00;
+}
+
+body.alto-contraste input,
+body.alto-contraste select,
+body.alto-contraste textarea {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+body.alto-contraste :focus-visible {
+    outline: 3px solid #00FFFF;
+    outline-offset: 3px;
 }

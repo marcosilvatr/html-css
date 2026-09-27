@@ -1,3 +1,7 @@
+import { carregarAnimais } from "./animais.js";
+import { configurarFormulario } from "./formulario.js";
+import { mostrarCadastros } from "./storage.js";
+
 const app = document.getElementById("app");
 
 // Guarda todo o conteúdo original do index
@@ -692,3 +696,35 @@ window.addEventListener(
 );
 
 carregarPagina();
+
+
+
+
+const botaoContraste = document.getElementById("botao-contraste");
+
+function atualizarTextoContraste() {
+    if (document.body.classList.contains("alto-contraste")) {
+        botaoContraste.textContent = "Desativar alto contraste";
+    } else {
+        botaoContraste.textContent = "Alto contraste";
+    }
+}
+
+if (localStorage.getItem("altoContraste") === "ativo") {
+    document.body.classList.add("alto-contraste");
+}
+
+atualizarTextoContraste();
+
+botaoContraste.addEventListener("click", function () {
+
+    document.body.classList.toggle("alto-contraste");
+
+    if (document.body.classList.contains("alto-contraste")) {
+        localStorage.setItem("altoContraste", "ativo");
+    } else {
+        localStorage.setItem("altoContraste", "inativo");
+    }
+
+    atualizarTextoContraste();
+});

@@ -2,7 +2,7 @@
 // VALIDAÇÃO DO FORMULÁRIO DE ADOÇÃO
 // ==========================================
 
-function configurarFormulario() {
+export function configurarFormulario() {
 
     const formulario = document.getElementById("form-adocao");
 

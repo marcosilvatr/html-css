@@ -51,7 +51,7 @@ const animais = [
 // FUNÇÃO QUE CRIA OS CARDS DOS ANIMAIS
 // ==========================================
 
-function carregarAnimais() {
+export function carregarAnimais() {
 
     // Procura no HTML o local onde os animais serão exibidos
     const listaAnimais = document.getElementById("lista-animais");

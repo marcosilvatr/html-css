@@ -36,7 +36,7 @@ function salvarCadastro(cadastro) {
 // MOSTRAR HISTÓRICO DE CADASTROS
 // ==========================================
 
-function mostrarCadastros() {
+export function mostrarCadastros() {
 
     const lista = document.getElementById("historico-cadastros");
 
