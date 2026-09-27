@@ -609,12 +609,42 @@ function carregarPagina() {
     mostrarCadastros();
 
     configurarEventos();
+
+    atualizarMenuAtivo();
 }
 
 
-function configurarEventos() {
+// FUNÇÃO DO MENU ATIVO
+function atualizarMenuAtivo() {
 
-  
+    const rotaAtual =
+        window.location.hash.replace("#", "") || "/";
+
+    const links = document.querySelectorAll("nav a");
+
+    links.forEach(function(link) {
+
+        link.classList.remove("ativo");
+
+        const href = link.getAttribute("href");
+
+        // Ignora links que não são rotas da SPA
+        if (!href.startsWith("#/")) {
+            return;
+        }
+
+        const rotaLink = href.replace("#", "");
+
+        if (rotaLink === rotaAtual) {
+            link.classList.add("ativo");
+        }
+
+    });
+}
+
+
+
+function configurarEventos() {
 
 
     // MODAL
