@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro para Adoção - Amor de Quatro Patas</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Amor de Quatro Patas</h1>
+
+        <p>Cadastro para adoção responsável</p>
+
+        <nav>
+            <a href="#/" data-rota="/">Início</a>
+            <a href="#/projetos" data-rota="/projetos">Projetos</a>
+            <a href="#/cadastro" data-rota="/cadastro">Cadastro</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Formulário de adoção</h2>
+
+            <div class="alert alert-info">
+                <strong>Informação:</strong>
+                Preencha todos os campos obrigatórios antes de enviar
+                o formulário.
+            </div>
+
+            <form id="form-adocao">
+
+
+                <!-- DADOS PESSOAIS -->
+                <fieldset>
+
+                    <legend>Dados pessoais</legend>
+
+                    <label for="nome">
+                        Nome completo:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        minlength="3"
+                        required
+                    >
+
+
+                    <label for="email">
+                        E-mail:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+
+
+                    <label for="cpf">
+                        CPF:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                        placeholder="000.000.000-00"
+                        required
+                    >
+
+
+                    <label for="telefone">
+                        Telefone:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                        placeholder="(11) 99999-9999"
+                        required
+                    >
+
+
+                    <label for="nascimento">
+                        Data de nascimento:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    >
+
+
+                    <label for="idade">
+                        Idade:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="idade"
+                        name="idade"
+                        min="18"
+                        max="100"
+                        required
+                    >
+
+                </fieldset>
+
+
+                <!-- ENDEREÇO -->
+                <fieldset>
+
+                    <legend>Endereço</legend>
+
+                    <label for="cep">
+                        CEP:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cep"
+                        name="cep"
+                        pattern="[0-9]{5}-[0-9]{3}"
+                        placeholder="00000-000"
+                        required
+                    >
+
+
+                    <label for="endereco">
+                        Endereço:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="endereco"
+                        name="endereco"
+                        required
+                    >
+
+
+                    <label for="numero">
+                        Número:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="numero"
+                        name="numero"
+                        min="1"
+                        required
+                    >
+
+
+                    <label for="cidade">
+                        Cidade:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cidade"
+                        name="cidade"
+                        required
+                    >
+
+
+                    <label for="estado">
+                        Estado:
+                    </label>
+
+                    <select id="estado" name="estado" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="SP">
+                            São Paulo
+                        </option>
+
+                        <option value="RJ">
+                            Rio de Janeiro
+                        </option>
+
+                        <option value="MG">
+                            Minas Gerais
+                        </option>
+
+                        <option value="PR">
+                            Paraná
+                        </option>
+
+                        <option value="SC">
+                            Santa Catarina
+                        </option>
+
+                        <option value="RS">
+                            Rio Grande do Sul
+                        </option>
+
+                    </select>
+
+                </fieldset>
+
+
+                <!-- INFORMAÇÕES SOBRE ADOÇÃO -->
+                <fieldset>
+
+                    <legend>Informações sobre a adoção</legend>
+
+
+                    <label for="cao">
+                        Escolha o cão:
+                    </label>
+
+                    <select id="cao" name="cao" required>
+
+                        <option value="">
+                            Selecione um cão
+                        </option>
+
+                        <option value="gordao">
+                            Gordão
+                        </option>
+
+                        <option value="pituxa">
+                            Pituxa
+                        </option>
+
+                        <option value="branquela">
+                            Branquela
+                        </option>
+
+                        <option value="mel">
+                            Mel
+                        </option>
+
+                        <option value="bob">
+                            Bob
+                        </option>
+
+                        <option value="apolo">
+                            Apolo
+                        </option>
+
+                    </select>
+
+
+                    <p>
+                        Você possui outros animais?
+                    </p>
+
+                    <label class="opcao">
+
+                        <input
+                            type="radio"
+                            name="outros_animais"
+                            value="sim"
+                            required
+                        >
+
+                        Sim
+
+                    </label>
+
+
+                    <label class="opcao">
+
+                        <input
+                            type="radio"
+                            name="outros_animais"
+                            value="nao"
+                        >
+
+                        Não
+
+                    </label>
+
+
+                    <p>
+                        Tipo de residência:
+                    </p>
+
+                    <label class="opcao">
+
+                        <input
+                            type="radio"
+                            name="residencia"
+                            value="casa"
+                            required
+                        >
+
+                        Casa
+
+                    </label>
+
+
+                    <label class="opcao">
+
+                        <input
+                            type="radio"
+                            name="residencia"
+                            value="apartamento"
+                        >
+
+                        Apartamento
+
+                    </label>
+
+
+                    <label for="motivo">
+                        Por que deseja adotar?
+                    </label>
+
+                    <textarea
+                        id="motivo"
+                        name="motivo"
+                        required
+                    ></textarea>
+
+                </fieldset>
+
+
+                <!-- RESPONSABILIDADE -->
+                <fieldset>
+
+                    <legend>Responsabilidade pela adoção</legend>
+
+
+                    <label class="opcao">
+
+                        <input
+                            type="checkbox"
+                            name="responsabilidade"
+                            required
+                        >
+
+                        Confirmo que estou de acordo com as
+                        responsabilidades de uma adoção.
+
+                    </label>
+
+
+                    <label class="opcao">
+
+                        <input
+                            type="checkbox"
+                            name="contato"
+                            required
+                        >
+
+                        Autorizo a equipe da ONG a entrar em contato
+                        comigo sobre o processo de adoção.
+
+                    </label>
+
+                </fieldset>
+
+
+                <div class="alert alert-atencao">
+                    <strong>Atenção:</strong>
+                    Confira seus dados antes de enviar o formulário.
+                </div>
+
+
+                <input
+                    type="submit"
+                    value="Enviar cadastro"
+                >
+
+                <input
+                    type="reset"
+                    value="Limpar formulário"
+                >
+
+            </form>
+
+            <div id="mensagem-sucesso" class="alert alert-sucesso mensagem-sucesso">
+                <strong>Formulário enviado com sucesso!</strong><br>
+                Obrigado por preencher o cadastro. Nossa equipe entrará em contato.
+            </div>
+
+        </section>
+
+
+        <!-- TOAST -->
+        <div class="toast" role="status">
+            <strong>Formulário</strong><br>
+            Preencha os campos obrigatórios para continuar.
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <address>
+            Amor de Quatro Patas<br>
+            Rua dos Animais, 100 - São Paulo/SP<br>
+            Telefone: (11) 99999-9999<br>
+            E-mail: contato@amordequatropatas.com
+        </address>
+
+        <p>Redes sociais:</p>
+
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">TikTok</a></li>
+        </ul>
+
+        <p>&copy; 2026 Amor de Quatro Patas</p>
+
+    </footer>
+
+
+</body>
+
+<script>
+    const formulario = document.getElementById("form-adocao");
+    const mensagemSucesso = document.getElementById("mensagem-sucesso");
+
+    formulario.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        mensagemSucesso.style.display = "block";
+
+        formulario.reset();
+
+        mensagemSucesso.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    });
+</script>
+
+</html>

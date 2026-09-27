@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projetos - Amor de Quatro Patas</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Amor de Quatro Patas</h1>
+
+        <p>Projetos e formas de ajudar</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html">Adote um cão</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- APRESENTAÇÃO -->
+        <section id="projetos">
+
+            <h2>Nossos projetos</h2>
+
+            <p>
+                Nossos projetos têm como objetivo melhorar a qualidade de vida
+                dos animais e incentivar a adoção responsável.
+            </p>
+
+        </section>
+
+
+        <!-- DOAÇÕES -->
+        <section id="doacoes">
+
+            <h2>Campanhas de doação</h2>
+
+
+            <article>
+
+                <h3>Campanha Ração para Todos</h3>
+
+                <span class="badge badge-adocao">
+                    Campanha ativa
+                </span>
+
+                <p>
+                    Arrecadamos ração para ajudar na alimentação dos animais
+                    que estão sob os cuidados da ONG.
+                </p>
+
+                <div class="alert alert-info">
+                    <strong>Informação:</strong>
+                    Doações de ração podem ser entregues diretamente à ONG.
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <h3>Campanha Cuidados Veterinários</h3>
+
+                <span class="badge badge-vacinado">
+                    Saúde animal
+                </span>
+
+                <p>
+                    As doações também ajudam a custear consultas,
+                    medicamentos, vacinas e outros cuidados veterinários.
+                </p>
+
+                <div class="alert alert-atencao">
+                    <strong>Atenção:</strong>
+                    Os cuidados veterinários são importantes para garantir
+                    a saúde dos animais.
+                </div>
+
+            </article>
+
+
+            <article>
+
+                <h3>Como realizar uma doação</h3>
+
+                <p>
+                    Você pode contribuir através de doações de ração,
+                    medicamentos ou valores que serão utilizados nas
+                    necessidades da ONG.
+                </p>
+
+                <div class="alert alert-sucesso">
+                    <strong>Obrigado!</strong>
+                    Sua contribuição ajuda diretamente os animais.
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- VOLUNTARIADO -->
+        <section id="voluntariado">
+
+            <h2>Voluntariado</h2>
+
+
+            <article>
+
+                <h3>Atividades voluntárias</h3>
+
+                <p>
+                    Os voluntários podem ajudar nos cuidados dos animais,
+                    eventos de adoção, divulgação e outras atividades.
+                </p>
+
+                <span class="badge badge-adocao">
+                    Seja voluntário
+                </span>
+
+            </article>
+
+
+            <article>
+
+                <h3>Como se tornar voluntário</h3>
+
+                <p>
+                    Para participar, entre em contato com nossa equipe
+                    e informe seu interesse em ajudar.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- OUTRAS FORMAS -->
+        <section id="ajudar">
+
+            <h2>Outras formas de ajudar</h2>
+
+            <ul>
+                <li>Compartilhar os animais disponíveis.</li>
+                <li>Participar de eventos.</li>
+                <li>Realizar doações.</li>
+                <li>Ser voluntário.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+        <section id="resultados">
+
+            <h2>Resultados</h2>
+
+            <p>
+                Com a ajuda de doadores e voluntários, conseguimos oferecer
+                melhores condições para os animais e aumentar as oportunidades
+                de adoção.
+            </p>
+
+        </section>
+
+
+        <!-- COMPONENTES DE FEEDBACK -->
+        <section id="feedback">
+
+            <h2>Componentes de feedback</h2>
+
+            <p>
+                Exemplos dos componentes utilizados no projeto:
+            </p>
+
+
+            <h3>Alertas</h3>
+
+            <div class="alert alert-info">
+                <strong>Informação:</strong>
+                Esta é uma mensagem informativa.
+            </div>
+
+            <div class="alert alert-sucesso">
+                <strong>Sucesso:</strong>
+                A ação foi realizada com sucesso.
+            </div>
+
+            <div class="alert alert-atencao">
+                <strong>Atenção:</strong>
+                Confira as informações antes de continuar.
+            </div>
+
+
+            <h3>Badges</h3>
+
+            <span class="badge badge-adocao">
+                Disponível
+            </span>
+
+            <span class="badge badge-idade">
+                2 anos
+            </span>
+
+            <span class="badge badge-vacinado">
+                Vacinado
+            </span>
+
+
+            <h3>Modal</h3>
+
+            <button type="button"
+                    class="botao-modal"
+                    onclick="document.getElementById('modal-adocao').showModal()">
+                Abrir modal
+            </button>
+
+        </section>
+
+
+        <!-- TOAST -->
+        <div class="toast" role="status">
+            <strong>Notificação</strong><br>
+            Projeto carregado com sucesso!
+        </div>
+
+
+        <!-- MODAL -->
+        <dialog id="modal-adocao" class="modal-dialog">
+
+            <div class="modal-conteudo">
+
+                <h2>Processo de adoção</h2>
+
+                <p>
+                    Para iniciar o processo de adoção, preencha o formulário
+                    com seus dados e escolha o animal que deseja adotar.
+                </p>
+
+                <button type="button"
+                        onclick="document.getElementById('modal-adocao').close()">
+                    Fechar
+                </button>
+
+                <a href="cadastro.html" class="modal-link">
+                    Ir para o cadastro
+                </a>
+
+            </div>
+
+        </dialog>
+
+    </main>
+
+
+    <footer>
+
+        <address>
+            Amor de Quatro Patas<br>
+            Rua dos Animais, 100 - São Paulo/SP<br>
+            Telefone: (11) 99999-9999<br>
+            E-mail: contato@amordequatropatas.com
+        </address>
+
+        <p>Redes sociais:</p>
+
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">TikTok</a></li>
+        </ul>
+
+        <p>&copy; 2026 Amor de Quatro Patas</p>
+
+    </footer>
+
+</body>
+</html>
